@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
 import { FoodComponent } from './food/food.component';
+import { FoodService } from './services/foodService';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { FoodComponent } from './food/food.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [AuthService],
+  providers: [AuthService,FoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
