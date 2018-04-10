@@ -14,10 +14,6 @@ export class FoodComponent implements OnInit{
     nizGlavnih = []
 
     nemanjaVariable: any
-    constructor(private foodService: FoodService) {}
-
-    ngOnInit() {
-       
 
     constructor(private foodService: FoodService) {}
 
@@ -37,6 +33,5 @@ export class FoodComponent implements OnInit{
     checkNiz() {
         if(this.nizPredjela.length  === 0) return false;
         return true;
-      })
     }
 }
