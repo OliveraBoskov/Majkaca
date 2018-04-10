@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { FoodComponent } from "./food/food.component";
 import { UsersComponent } from "./users/users.component";
 import { RestaurantsComponent } from "./restaurants/restaurants.component";
+import { SideDishComponent } from "./sideDish/sideDish.component";
 
 const routes: Routes = [
     // { path: 'login', component: LogInComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'food', component: FoodComponent},
     { path: 'users', component: UsersComponent},
-    { path: 'restaurants', component: RestaurantsComponent}
+    { path: 'restaurants', component: RestaurantsComponent},
+    { path: 'sideDish', component: SideDishComponent}
 ]
 
 const config: ExtraOptions = {
