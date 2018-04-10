@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RestaurantService } from "../services/restaurantService";
 
 @Component({
     selector: 'app-restaurants',
@@ -10,11 +11,15 @@ export class RestaurantsComponent implements OnInit{
     location: string;
     phoneNumber: string;
     description: string;
+    nizRestorana = [];
+
+    constructor (private restaurantService: RestaurantService) {}
 
     ngOnInit() {
-        this.name = localStorage.getItem('name');
-        this.location = localStorage.getItem('location');
-        this.phoneNumber = localStorage.getItem('phoneNumber');
-        this.description = localStorage.getItem('description');
+        
+        this.restaurantService.getRestaurants().subscribe(data => {
+            console.log(data);
+            this.nizRestorana = data.restaurants;
+        })
     }
 }

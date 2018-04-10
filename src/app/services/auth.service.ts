@@ -27,4 +27,9 @@ export class AuthService{
         return this.http.post(this.BASE_URL + '/logIn', body, httpOptions).map(data => data);
 
     }
+
+    getUsers(): Observable<any> {
+        return this.http.get(this.BASE_URL + '/getUsers')
+    }
+
 }
