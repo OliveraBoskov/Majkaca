@@ -15,4 +15,9 @@ export class FoodService {
         return this.http.get('http://localhost:8090/food/getfood')
     }
 
+    getSideDishes(): Observable<any> {
+        return this.http.get('http://localhost:8090/sideDish/getSideDishes')
+    }
+
+
 }

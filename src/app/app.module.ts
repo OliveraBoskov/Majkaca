@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FoodComponent } from './food/food.component';
 import { FoodService } from './services/foodService';
+import { SideDishComponent } from './sideDish/sideDish.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FoodService } from './services/foodService';
     RegisterComponent,
     HeaderComponent,
     HomeComponent,
-    FoodComponent
+    FoodComponent,
+    SideDishComponent
   ],
   imports: [
     BrowserModule,
