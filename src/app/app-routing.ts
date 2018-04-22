@@ -7,6 +7,7 @@ import { FoodComponent } from "./food/food.component";
 import { UsersComponent } from "./users/users.component";
 import { RestaurantsComponent } from "./restaurants/restaurants.component";
 import { SideDishComponent } from "./sideDish/sideDish.component";
+import { NewFoodComponent } from "./restaurant-management/newFood/newFood.component";
 
 const routes: Routes = [
     // { path: 'login', component: LogInComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
     { path: 'food', component: FoodComponent},
     { path: 'users', component: UsersComponent},
     { path: 'restaurants', component: RestaurantsComponent},
-    { path: 'sideDish', component: SideDishComponent}
+    { path: 'sideDish', component: SideDishComponent},
+    { path: 'newFood', component: NewFoodComponent}
 ]
 
 const config: ExtraOptions = {

@@ -12,12 +12,17 @@ export class FoodService {
     constructor(private http: HttpClient) {}
 
     getFood(): Observable<any> {
-        return this.http.get('http://localhost:8090/food/getfood')
+        return this.http.get('http://localhost:8090/food/getfood');
     }
 
     getSideDishes(): Observable<any> {
-        return this.http.get('http://localhost:8090/sideDish/getSideDishes')
+        return this.http.get('http://localhost:8090/sideDish/getSideDishes');
     }
 
+
+    createNewFood(sdfs, safsa, xxxxxx): Observable<any> {
+        const body = JSON.stringify({name: sdfs, price: safsa, description: xxxxxx});
+        return this.http.post('http://localhost:8090/food/createFood',body , httpOptions);
+    }
 
 }
