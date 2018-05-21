@@ -9,19 +9,21 @@ import { RestaurantsComponent } from "./restaurants/restaurants.component";
 import { SideDishComponent } from "./sideDish/sideDish.component";
 import { NewFoodComponent } from "./restaurant-management/newFood/newFood.component";
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { UserProfileComponent } from "./users/user-profile/user-profile.component";
 // #4 napraviti stranicu i komponentu za user-a
 // #5  prosiriti routing sa profilnom stranicom
 const routes: Routes = [
-    // { path: 'login', component: LogInComponent},
+    { path: 'login', component: LogInComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-    // { path: 'register', component: RegisterComponent},
+    { path: 'register', component: RegisterComponent},
     { path: 'home', component: HomeComponent},
     { path: 'food', component: FoodComponent},
     { path: 'users', component: UsersComponent},
     { path: 'restaurants', component: RestaurantsComponent},
     { path: 'restaurants/:id', component: RestaurantComponent},
     { path: 'sideDish', component: SideDishComponent},
-    { path: 'newFood', component: NewFoodComponent}
+    { path: 'newFood', component: NewFoodComponent},
+    { path: 'users/:id', component: UserProfileComponent}
 ]
 
 const config: ExtraOptions = {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../services/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-users',
@@ -15,7 +16,8 @@ export class UsersComponent implements OnInit{
     role: string;
     nizUsera = [];
 
-    constructor(private authService: AuthService) {}
+    constructor(private authService: AuthService,
+    private router: Router) {}
 
     ngOnInit() {
        
@@ -23,6 +25,14 @@ export class UsersComponent implements OnInit{
           console.log(data);
           this.nizUsera = data.users;
       })
+    }
+
+    onUsers(user){
+
+        console.log('pritisnuo' + user.email);
+        const email = user.email;
+        this.router.navigateByUrl('/users/' + email);
+
     }
 
 }

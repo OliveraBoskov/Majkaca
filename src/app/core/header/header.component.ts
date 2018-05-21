@@ -19,15 +19,16 @@ export class HeaderComponent{
     //#1
     //DOPUNITI SA ROUTER NAVIGATEBYURL -> NA OSNOVU APP.ROUTING.MODULE.TS SA ODGOVARAJUCIM LINKOVIMA
     onLogin() {
-        console.log('test2')
+        this.router.navigateByUrl('/login');
     }
 
     onRegister() {
-        console.log('test3')
+        this.router.navigateByUrl('register');
     }
 
     onUsers() {
-        console.log('test4');
+        this.router.navigateByUrl('/users')
+
     }
 
     goToFood() {

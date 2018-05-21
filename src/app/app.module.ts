@@ -22,6 +22,7 @@ import { RestaurantService } from './services/restaurantService';
 import { SideDishComponent } from './sideDish/sideDish.component';
 import { NewFoodComponent } from './restaurant-management/newFood/newFood.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
     RestaurantsComponent,
     SideDishComponent,
     NewFoodComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
