@@ -21,7 +21,7 @@ export class RestaurantService{
     }
 
     getSingleRestaurant(id: string): Observable<any> {
-        return this.http.get(this.BASE_URL + '/getSingle/' + id);
+        return this.http.get(this.BASE_URL + '/getSingleRestaurant/' + id);
     }
 
     

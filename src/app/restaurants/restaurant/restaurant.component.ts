@@ -8,16 +8,12 @@ import { RestaurantService } from '../../services/restaurantService';
 })
 export class RestaurantComponent implements OnInit {
 
+    restaurant: any;
+
     constructor(
         private route: ActivatedRoute,
         private restaurantService: RestaurantService
     ) {}
-
-    restaurant = {
-        name: 'Test',
-        address: 'test2',
-        description: 'ok'
-    }
 
     ngOnInit() {
         //kako dobijam koji je id gore
@@ -27,6 +23,8 @@ export class RestaurantComponent implements OnInit {
         this.restaurantService.getSingleRestaurant(id).toPromise()
         .then( data => {
             console.log(data);
+            // neki objekat ce biti sve sto je stiglo sa servera
+            this.restaurant = data;
         })
     }
 
