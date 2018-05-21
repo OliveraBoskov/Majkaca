@@ -1,3 +1,4 @@
-<h1 *ngFor = "let restaurants of nizRestorana">
+<!-- prosledjujemo restorataunts promenljivu iz nizRestorana (iz petlje foreach u funckiju) -->
+<h1 *ngFor = "let restaurants of nizRestorana" (click)="onRestroraunt(restaurants)">
     {{restaurants.name}}
 </h1>

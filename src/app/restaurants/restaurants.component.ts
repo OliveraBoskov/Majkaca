@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RestaurantService } from "../services/restaurantService";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-restaurants',
@@ -13,7 +14,10 @@ export class RestaurantsComponent implements OnInit{
     description: string;
     nizRestorana = [];
 
-    constructor (private restaurantService: RestaurantService) {}
+    constructor (
+        private restaurantService: RestaurantService,
+        private router: Router,
+    ) {}
 
     ngOnInit() {
         
@@ -21,5 +25,12 @@ export class RestaurantsComponent implements OnInit{
             console.log(data);
             this.nizRestorana = data.restaurants;
         })
+    }
+
+    //PRAVIM DINAMICKU ROUTU
+    onRestroraunt(restoran) {
+        console.log('pritisnuo ' + restoran.id);
+        const id = restoran.id;
+        this.router.navigateByUrl('/restaurants/' + id);   
     }
 }

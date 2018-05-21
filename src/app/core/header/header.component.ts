@@ -9,12 +9,25 @@ import { RestaurantService } from "../../services/restaurantService";
 
 export class HeaderComponent{
 
-    constructor(private router: Router)
-        {}
+    constructor(
+        private router: Router
+    ) {}
 
     onHome() {
-        console.log('test')
         this.router.navigateByUrl('/restaurants');
+    }
+    //#1
+    //DOPUNITI SA ROUTER NAVIGATEBYURL -> NA OSNOVU APP.ROUTING.MODULE.TS SA ODGOVARAJUCIM LINKOVIMA
+    onLogin() {
+        console.log('test2')
+    }
+
+    onRegister() {
+        console.log('test3')
+    }
+
+    onUsers() {
+        console.log('test4');
     }
 
     goToFood() {
