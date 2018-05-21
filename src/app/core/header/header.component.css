@@ -1,0 +1,22 @@
+.btn-custom {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+    height: 50px;
+    font-weight: 200;
+}
+
+.btn-custom :hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.padding25 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.maring30top {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

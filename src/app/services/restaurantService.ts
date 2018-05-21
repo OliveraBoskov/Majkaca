@@ -20,6 +20,10 @@ export class RestaurantService{
         return this.http.get(this.BASE_URL + '/getRestaurants')
     }
 
+    getSingleRestaurant(id: string): Observable<any> {
+        return this.http.get(this.BASE_URL + '/getSingle/' + id);
+    }
+
     
  
 }

@@ -4,6 +4,7 @@ import { RestaurantService } from "../../services/restaurantService";
 
 @Component({
     selector: 'app-header',
+    styleUrls: ['./header.component.css'],
     templateUrl: './header1.component.html'
 })
 
