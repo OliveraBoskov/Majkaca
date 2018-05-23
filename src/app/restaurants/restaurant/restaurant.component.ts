@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { RestaurantService } from '../../services/restaurantService';
+import { FoodService } from "../../services/foodService";
 
 @Component({
     selector: 'app-restaurant',
@@ -8,12 +9,16 @@ import { RestaurantService } from '../../services/restaurantService';
 })
 export class RestaurantComponent implements OnInit {
 
-    restaurant: any;
+    restaurant = {
+        name: ''
+    };
     infoArray = [];
-
+    food: any;
+    menuItems= [];
     constructor(
         private route: ActivatedRoute,
-        private restaurantService: RestaurantService
+        private restaurantService: RestaurantService,
+        private foodService: FoodService
     ) {}
 
     ngOnInit() {
@@ -27,7 +32,16 @@ export class RestaurantComponent implements OnInit {
             // neki objekat ce biti sve sto je stiglo sa servera
             this.restaurant = data;
             this.convertToInfoObject();
+        });
+        this.foodService.getFood().toPromise().then( data => {
+            this.food = data.food;
+            console.log(this.food);
+            this.createMenu();
+            console.log(this.menuItems)
+            this.createFoodArray();
+            console.log(this.menuItems)
         })
+       
     }
 
     convertToInfoObject() {
@@ -40,6 +54,27 @@ export class RestaurantComponent implements OnInit {
             }
             this.infoArray.push(objekat);
         });
+    }
+
+    createMenu() {
+        this.food.forEach( food => {
+            if(!this.menuItems.some( menuItem => menuItem.name === food.typeF)) {
+                this.menuItems.push({
+                    name: food.typeF,
+                    items: []
+                });
+            }
+        })
+    }
+
+    createFoodArray() {
+        this.menuItems.forEach(menuItem => {
+            this.food.forEach(food => {
+                if(food.typeF === menuItem.name) {
+                    menuItem.items.push(food);
+                }
+            })
+        })
     }
 
 }

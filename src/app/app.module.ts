@@ -25,6 +25,7 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import { InfoComponent } from './core/compoents/info/info.component';
 import { VezbaComponent } from './users/user-profile/vezba/vezba.component';
+import { JelovnikComponent } from './restaurants/jelovnik/jelovnik.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { VezbaComponent } from './users/user-profile/vezba/vezba.component';
     RestaurantComponent,
     UserProfileComponent,
     InfoComponent,
-    VezbaComponent
+    VezbaComponent,
+    JelovnikComponent
   ],
   imports: [
     BrowserModule,
