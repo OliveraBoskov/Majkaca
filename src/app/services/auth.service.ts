@@ -23,9 +23,7 @@ export class AuthService{
     
     logIn(user: User): Observable<any>{
         const body = JSON.stringify(user);
-
         return this.http.post(this.BASE_URL + '/logIn', body, httpOptions).map(data => data);
-
     }
 
     getUsers(): Observable<any> {
