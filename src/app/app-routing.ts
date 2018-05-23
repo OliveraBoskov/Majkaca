@@ -23,7 +23,7 @@ const routes: Routes = [
     { path: 'restaurants/:id', component: RestaurantComponent},
     { path: 'sideDish', component: SideDishComponent},
     { path: 'newFood', component: NewFoodComponent},
-    { path: 'users/:id', component: UserProfileComponent}
+    { path: 'users/:email', component: UserProfileComponent}
 ]
 
 const config: ExtraOptions = {
