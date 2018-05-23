@@ -24,7 +24,6 @@ import { NewFoodComponent } from './restaurant-management/newFood/newFood.compon
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -11,7 +11,7 @@ const httpOptions = {
 @Injectable()
 export class AuthService{
     httpOptions = new HttpHeaders({ 'Content-Type': 'application/json'});
-    private BASE_URL = 'http://localhost:8090/users';
+    private BASE_URL = 'http://localhost:8090/user';
 
     constructor(private http: HttpClient) {}
 
