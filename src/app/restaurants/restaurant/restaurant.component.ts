@@ -9,6 +9,7 @@ import { RestaurantService } from '../../services/restaurantService';
 export class RestaurantComponent implements OnInit {
 
     restaurant: any;
+    infoArray = [];
 
     constructor(
         private route: ActivatedRoute,
@@ -25,7 +26,20 @@ export class RestaurantComponent implements OnInit {
             console.log(data);
             // neki objekat ce biti sve sto je stiglo sa servera
             this.restaurant = data;
+            this.convertToInfoObject();
         })
+    }
+
+    convertToInfoObject() {
+        Object.keys(this.restaurant).forEach( i => {
+            console.log(i);
+            console.log(this.restaurant[i]);
+            const objekat = {
+                key: i,
+                value: this.restaurant[i]
+            }
+            this.infoArray.push(objekat);
+        });
     }
 
 }

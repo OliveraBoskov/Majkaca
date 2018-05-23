@@ -23,7 +23,8 @@ import { SideDishComponent } from './sideDish/sideDish.component';
 import { NewFoodComponent } from './restaurant-management/newFood/newFood.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
-
+import { InfoComponent } from './core/compoents/info/info.component';
+import { VezbaComponent } from './users/user-profile/vezba/vezba.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
     SideDishComponent,
     NewFoodComponent,
     RestaurantComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    InfoComponent,
+    VezbaComponent
   ],
   imports: [
     BrowserModule,

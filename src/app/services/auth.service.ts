@@ -11,7 +11,7 @@ const httpOptions = {
 @Injectable()
 export class AuthService{
     httpOptions = new HttpHeaders({ 'Content-Type': 'application/json'});
-    private BASE_URL = 'http://localhost:8090/users';
+    private BASE_URL = 'http://localhost:8090/user';
 
     constructor(private http: HttpClient) {}
 
@@ -23,9 +23,7 @@ export class AuthService{
     
     logIn(user: User): Observable<any>{
         const body = JSON.stringify(user);
-
         return this.http.post(this.BASE_URL + '/logIn', body, httpOptions).map(data => data);
-
     }
 
     getUsers(): Observable<any> {
