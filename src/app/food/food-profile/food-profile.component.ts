@@ -12,12 +12,14 @@ export class FoodProfileComponent implements OnInit {
         name: ''
     };
     infoArray = [];
-    prilozi: any;
-    priloziItems = [];
+    
 
     //sredjujemo
     sideDish = [];
-
+    prilozi = {
+        name: '',
+        items: []
+    }
 
     constructor(
         private route: ActivatedRoute,
@@ -28,25 +30,17 @@ export class FoodProfileComponent implements OnInit {
         const id = this.route.snapshot.params.id;
         this.foodService.getSingleFood(id).toPromise()
         .then(data => {
-            console.log(data);
             this.food = data;
-            this.convertToInfoObject();
+            //za unutrasnji child setujem naslov iz food.name jer je to naslov
+            this.prilozi.name = this.food.name;
         });
         this.foodService.getSideDishes().toPromise().then(data => {
-            console.log(data);
-            // this.sideDish = data.sideDish;
-            console.log(this.sideDish);
-            // this.createListOfSideDishes();
-            console.log(this.priloziItems);
-            // this.createPriloziInfoArray();
-            console.log(this.priloziItems);
+            this.prilozi.items  = data.sideDishes;
         })
     }
 
     convertToInfoObject(){
         Object.keys(this.food).forEach( i => {
-            console.log(i);
-            console.log(this.food[i]);
             const objekat = {
                 key: i,
                 value: this.food[i]
@@ -54,11 +48,4 @@ export class FoodProfileComponent implements OnInit {
             this.infoArray.push(objekat);
         });
     }
-
-    // createListOfSideDishes(){
-    //     this.prilozi.forEach ( this.prilozi => {
-    
-    //     })
-    // }
-
 }

@@ -1,11 +1,11 @@
-// import { Component, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
-// @Component({
-//     selector: 'app-prilozi',
-//     templateUrl: './prilozi.component.html'
-// })
+@Component({
+    selector: 'app-prilozi',
+    templateUrl: './prilozi.component.html'
+})
 
-// export class PriloziComponent{
-//     @Input() title = "Naslov priloga";
-//     @Input() items;
-// }
+export class PriloziComponent{
+    @Input() title = "Naslov priloga";
+    @Input() items;
+}
