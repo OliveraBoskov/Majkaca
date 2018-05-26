@@ -4,6 +4,7 @@ import { HttpHeaders,HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import { Food } from "../model/food.model";
 import 'rxjs/add/operator/map';
+import { CreateFood } from "../model/create-food.model";
 
 const httpOptions = {
     headers: new HttpHeaders ( {'Content-Type' : 'application/json'})
@@ -26,10 +27,13 @@ export class FoodService {
         return this.http.get('http://localhost:8090/sideDish/getSideDishes');
     }
 
+    createFood(food: Food, sidedishIds: number[]): Observable<any> {
+        let createFood = new CreateFood();
+        createFood.setFoodValue(food);
+        createFood.sideDishIds = sidedishIds;
 
-    createNewFood(sdfs, safsa, xxxxxx): Observable<any> {
-        const body = JSON.stringify({name: sdfs, price: safsa, description: xxxxxx});
-        return this.http.post('http://localhost:8090/food/createFood',body , httpOptions);
+        return this.http.post(this.BASE_URL + '/createFood', createFood, httpOptions);
+
     }
 
     getSingleFood(id: string): Observable<any> {

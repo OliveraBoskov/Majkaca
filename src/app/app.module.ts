@@ -28,6 +28,7 @@ import { VezbaComponent } from './users/user-profile/vezba/vezba.component';
 import { JelovnikComponent } from './restaurants/jelovnik/jelovnik.component';
 import { FoodProfileComponent } from './food/food-profile/food-profile.component';
 import { PriloziComponent } from './food/prilozi/prilozi.component';
+import { AddFoodComponent } from './food/food-add/add-food.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PriloziComponent } from './food/prilozi/prilozi.component';
     VezbaComponent,
     JelovnikComponent,
     FoodProfileComponent,
-    PriloziComponent
+    PriloziComponent,
+    AddFoodComponent
   ],
   imports: [
   BrowserModule,

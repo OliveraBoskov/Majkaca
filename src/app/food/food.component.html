@@ -1,3 +1,4 @@
 <h1 *ngFor = "let food of nizFood" (click) = "onFood(food)">
   {{food.name}}
 </h1>
+<button class="btn btn-warning" (click)="onAddFood()">Dodaj hranu</button>

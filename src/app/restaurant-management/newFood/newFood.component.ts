@@ -38,9 +38,9 @@ export class NewFoodComponent implements OnInit{
 
     test(){
         alert('food name:' + this.name.value);
-        this.foodService.createNewFood(this.name.value, this.price.value, this.description.value).subscribe(data => {
-            console.log(data);
-        });
+        // this.foodService.createNewFood(this.name.value, this.price.value, this.description.value).subscribe(data => {
+        //     console.log(data);
+        // });
     }
 
 

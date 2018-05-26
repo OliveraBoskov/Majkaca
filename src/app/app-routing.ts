@@ -11,6 +11,7 @@ import { NewFoodComponent } from "./restaurant-management/newFood/newFood.compon
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { UserProfileComponent } from "./users/user-profile/user-profile.component";
 import { FoodProfileComponent } from './food/food-profile/food-profile.component';
+import { AddFoodComponent } from './food/food-add/add-food.component';
 // #4 napraviti stranicu i komponentu za user-a
 // #5  prosiriti routing sa profilnom stranicom
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent},
     { path: 'home', component: HomeComponent},
     { path: 'food', component: FoodComponent},
+    { path: 'food/add', component: AddFoodComponent},
     { path: 'food/:id', component: FoodProfileComponent},
     { path: 'users', component: UsersComponent},
     { path: 'restaurants', component: RestaurantsComponent},
@@ -33,7 +35,7 @@ const config: ExtraOptions = {
 }
 @NgModule({
     imports: [RouterModule.forRoot(routes, config)],
-exports: [RouterModule]
+    exports: [RouterModule]
 })
 
 export class AppRoutingModule {}
