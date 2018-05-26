@@ -33,8 +33,7 @@ export class HeaderComponent{
     }
 
     goToFood() {
-        alert('kliknuo sam')
-        this.router.navigateByUrl('food');
+        this.router.navigateByUrl('/food');
     }
 
 
