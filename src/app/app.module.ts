@@ -26,6 +26,7 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
 import { InfoComponent } from './core/compoents/info/info.component';
 import { VezbaComponent } from './users/user-profile/vezba/vezba.component';
 import { JelovnikComponent } from './restaurants/jelovnik/jelovnik.component';
+import { FoodProfileComponent } from './food/food-profile/food-profile.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +44,11 @@ import { JelovnikComponent } from './restaurants/jelovnik/jelovnik.component';
     UserProfileComponent,
     InfoComponent,
     VezbaComponent,
-    JelovnikComponent
+    JelovnikComponent,
+    FoodProfileComponent,
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

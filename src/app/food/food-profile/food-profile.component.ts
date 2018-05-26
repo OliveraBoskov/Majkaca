@@ -14,6 +14,11 @@ export class FoodProfileComponent implements OnInit {
     infoArray = [];
     prilozi: any;
     priloziItems = [];
+
+    //sredjujemo
+    sideDish = [];
+
+
     constructor(
         private route: ActivatedRoute,
         private foodService: FoodService
@@ -27,12 +32,13 @@ export class FoodProfileComponent implements OnInit {
             this.food = data;
             this.convertToInfoObject();
         });
-        this.foodService.getSideDishes().toPromise.then(data => {
-            this.sideDish = data.sideDish;
+        this.foodService.getSideDishes().toPromise().then(data => {
+            console.log(data);
+            // this.sideDish = data.sideDish;
             console.log(this.sideDish);
-            this.createListOfSideDishes();
+            // this.createListOfSideDishes();
             console.log(this.priloziItems);
-            this.createPriloziInfoArray();
+            // this.createPriloziInfoArray();
             console.log(this.priloziItems);
         })
     }
@@ -49,10 +55,10 @@ export class FoodProfileComponent implements OnInit {
         });
     }
 
-    createListOfSideDishes(){
-        this.prilozi.forEach ( this.prilozi => {
+    // createListOfSideDishes(){
+    //     this.prilozi.forEach ( this.prilozi => {
     
-        })
-    }
+    //     })
+    // }
 
 }
